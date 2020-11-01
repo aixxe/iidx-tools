@@ -18,4 +18,4 @@ Build from source or [download a pre-compiled version][1], extract to the game d
 
 ## Requirements
 
-The library offsets are specific to the **2019090200** game version.
+The library offsets are specific to the **2020092900** game version.
