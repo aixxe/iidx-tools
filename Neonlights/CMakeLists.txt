@@ -12,9 +12,13 @@ CPMAddPackage(
     GITHUB_REPOSITORY TsudaKageyu/minhook
 )
 
-add_library(${PROJECT_NAME} SHARED
-    src/neonlights.cc
+set(VERSIONS
+    LDJ-003-2023090500
+    LDJ-012-2023090500
 )
 
-target_link_libraries(${PROJECT_NAME} minhook)
-target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
+foreach (VERSION ${VERSIONS})
+    add_library(${PROJECT_NAME}.${VERSION} SHARED src/${VERSION}.cc)
+    target_link_libraries(${PROJECT_NAME}.${VERSION} minhook)
+    target_compile_features(${PROJECT_NAME}.${VERSION} PRIVATE cxx_std_17)
+endforeach ()

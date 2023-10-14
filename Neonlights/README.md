@@ -6,7 +6,7 @@ I don't remember what any of this does, but it seems to work.
 
 ## Requirements
 
-The library offsets are specific to the **2023090500** (LDJ-003) game version.
+The library offsets are specific to the game version in the filename.
 
 Patterns are included next to each offset, so it should be easy to find and update as needed.
 
