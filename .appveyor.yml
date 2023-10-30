@@ -1,0 +1,18 @@
+build_cloud: Merlin
+image: Windows
+
+branches:
+  only:
+    - master
+
+configuration:
+  - Release
+  - MinSizeRel
+  - RelWithDebInfo
+
+build_script:
+  - cmake -G Ninja -DCMAKE_BUILD_TYPE="%CONFIGURATION%" -S Neonlights -B build/Neonlights
+  - cmake --build build/Neonlights
+
+artifacts:
+  - path: build\Neonlights\*.dll
